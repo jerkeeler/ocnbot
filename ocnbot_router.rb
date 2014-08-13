@@ -10,7 +10,7 @@ channels = ["#cacklingpanda"]
 # Filepath to the password file
 pass_file = ".secret"
 
-# Simple method for reading the OAutho password from a file
+# Simple method for reading the OAuth password from a file
 def secure_pass(filepath)
 	pass_file = filepath
 	if File.exist?(pass_file)
@@ -23,6 +23,7 @@ end
 password = secure_pass(pass_file)
 
 # Add twitch method to message object to allow the bot to send messages to twitch
+# Fixes error where Cinch bot cannot message "non-irc, but irc-esque" servers
 class Cinch::Message
     def twitch(string)
         string = string.to_s.gsub('<','&lt;').gsub('>','&gt;')
@@ -45,4 +46,5 @@ bot = Cinch::Bot.new do
 	end
 end
 
+# Start the bot!
 bot.start

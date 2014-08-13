@@ -4,4 +4,3 @@
 # Ignore misc. mac files and app files
 .project
 .DS_Store
-.idea
