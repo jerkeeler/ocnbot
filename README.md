@@ -8,7 +8,7 @@ If you would like OCNBot to be added to your channel please [email me](mailto:ca
 
 ## Your Own Bot
 
-If you would like to have the functionality of OCNBot, but under a different name, then you can! This repo is public after all! To do this a couple of dependencies need to be installed. OCNBot uses the Cinch IRC framework. Install the ruby gem Cinch by running `gem install cinch` in your shell environment. Next, change the parameters in the ocnbot_router.rb file to your bot's name, nickname, and the desired channels to be run on. After that add a .secret file that has your [twitch.tv oauth password](http://www.twitchapps.com/tmi/). Now you are setup and ready to go!
+If you would like to have the functionality of OCNBot, but under a different name, then you can! This repo is public after all! To do this a couple of dependencies need to be installed. OCNBot uses the Cinch IRC framework. Install the needed ruby gems by running `bundle update` followed by `bundle install` in your shell environment. Next, change the parameters in the ocnbot_router.rb file to your bot's name, nickname, and the desired channels to be run on. After that add a .secret file that has your [twitch.tv oauth password](http://www.twitchapps.com/tmi/). Now you are setup and ready to go!
 
 Run `ruby ocnbot_router.rb` and your bot will be up and running! Enjoy!
 
