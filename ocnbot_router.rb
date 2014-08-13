@@ -31,6 +31,17 @@ class Cinch::Message
     end
 end
 
+# First test plugin for cinch
+# Using plugins to better compartamentalize the components
+class Hello
+	include Cinch::Plugin
+
+	match "hello"
+	def execute(m)
+		m.twitch("Hello, #{m.user.nick}!")
+	end
+end
+
 # Create a Cinch bot
 bot = Cinch::Bot.new do
 	configure do |c|
@@ -39,10 +50,7 @@ bot = Cinch::Bot.new do
 		c.nick = nick
 		c.password = password
 		c.channels = channels
-	end
-
-	on :message, "hello ocnbot" do |m|
-		m.twitch "Hello #{m.user.nick}!"
+		c.plugins.plugins = [Hello]
 	end
 end
 
