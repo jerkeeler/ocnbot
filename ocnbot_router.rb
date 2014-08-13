@@ -8,7 +8,7 @@ port = 6667
 channels = ["#cacklingpanda"]
 
 # Filepath to the password file
-pass_file = "pass.secret"
+pass_file = ".secret"
 
 # Simple method for reading the OAutho password from a file
 def secure_pass(filepath)
@@ -39,7 +39,7 @@ bot = Cinch::Bot.new do
 		c.password = password
 		c.channels = channels
 	end
-	
+
 	on :message, "hello" do |m|
 		m.twitch "Hello #{m.user.nick}!"
 	end
