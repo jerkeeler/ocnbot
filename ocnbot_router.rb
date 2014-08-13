@@ -41,7 +41,7 @@ bot = Cinch::Bot.new do
 		c.channels = channels
 	end
 
-	on :message, "hello" do |m|
+	on :message, "hello ocnbot" do |m|
 		m.twitch "Hello #{m.user.nick}!"
 	end
 end
