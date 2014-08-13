@@ -1,0 +1,7 @@
+# Make sure to ignore that password file!
+.secret
+
+# Ignore misc. mac files and app files
+.project
+.DS_Store
+.idea
