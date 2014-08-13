@@ -15,3 +15,10 @@ Run `ruby ocnbot_router.rb` and your bot will be up and running! Enjoy!
 ## Contributing
 
 If you want to contribute ot OCNBot's functionality simply make a pull request with your changes! It's that easy! 
+
+
+## TO DO
+
+* Add unit tests
+* Add rake integration
+* Start implementing functionality!
