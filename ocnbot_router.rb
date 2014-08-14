@@ -1,4 +1,5 @@
 require 'cinch'
+require_relative './plugins/plugin_helper'
 
 # Twitch IRC parameters
 host = "irc.twitch.tv"
@@ -6,6 +7,9 @@ user = "OCNBot"
 nick = "OCNBot"
 port = 6667
 channels = ["#cacklingpanda"]
+
+# Plugins to load, class names
+load_plugins = [Hello, Player]
 
 # Filepath to the password file
 pass_file = ".secret"
@@ -31,17 +35,6 @@ class Cinch::Message
     end
 end
 
-# First test plugin for cinch
-# Using plugins to better compartamentalize the components
-class Hello
-	include Cinch::Plugin
-
-	match "hello"
-	def execute(m)
-		m.twitch("Hello, #{m.user.nick}!")
-	end
-end
-
 # Create a Cinch bot
 bot = Cinch::Bot.new do
 	configure do |c|
@@ -50,7 +43,7 @@ bot = Cinch::Bot.new do
 		c.nick = nick
 		c.password = password
 		c.channels = channels
-		c.plugins.plugins = [Hello]
+		c.plugins.plugins = load_plugins
 	end
 end
 
