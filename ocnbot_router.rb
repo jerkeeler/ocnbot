@@ -1,3 +1,13 @@
+# This program runs an IRC bot that connects to Twitch (http://twitch.tv) and 
+# provides functionality for OCN (https://oc.tc) streamers.
+#
+# Author:: Jeremy K. (cacklingpanda@gmail.com)
+# License:: This distributes under the MIT License
+
+# This class initializes the bot into the designated IRC channels, loads 
+# different plugins that have been developed for it and add Twitch integration
+# into the Cinch gem.
+
 require 'cinch'
 require_relative './plugins/plugin_helper'
 
