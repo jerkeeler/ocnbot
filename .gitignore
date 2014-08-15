@@ -4,3 +4,6 @@
 # Ignore misc. mac files and app files
 .project
 .DS_Store
+
+# Ignore test scripts file :p
+testscripts
