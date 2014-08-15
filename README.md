@@ -19,7 +19,7 @@ If you want to contribute to OCNBot's functionality simply make a pull request w
 
 ## TO DO
 
-* player data
+* player data :heavy_check_mark:
 * team data
 * topic title
 * mc status
