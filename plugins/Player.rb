@@ -14,19 +14,6 @@ class Player
 	end
 
 	def retrieve_player_data(nick)
-		uri = URI.parse("https://secure.com/")
-		http = Net::HTTP.new(uri.host, uri.port)
-		http.use_ssl = true
-		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-		request = Net::HTTP::Get.new(uri.request_uri)
-
-		response = http.request(request)
-		puts response.body
-		response.status
-		response["header-here"] # All headers are lowercase
-		puts response.body
-
-		return "Success retrieving #{nick}'s data!"
+		# TODO: Implement code
 	end
 end

@@ -6,6 +6,9 @@ host = "irc.twitch.tv"
 user = "OCNBot"
 nick = "OCNBot"
 port = 6667
+
+# List of channels to join
+# TODO: Make own method and abstract list of channels to a file
 channels = ["#cacklingpanda"]
 
 # Plugins to load, class names

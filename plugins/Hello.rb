@@ -4,6 +4,7 @@
 class Hello
 	include Cinch::Plugin
 
+	# Good to execute when matched with !hello
 	match "hello"
 	def execute(m)
 		m.twitch("Hello, #{m.user.nick}!")
