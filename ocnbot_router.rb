@@ -32,10 +32,10 @@ password = secure_pass(pass_file)
 # Add twitch method to message object to allow the bot to send messages to twitch
 # Fixes error where Cinch bot cannot message "non-irc, but irc-esque" servers
 class Cinch::Message
-    def twitch(string)
-        string = string.to_s.gsub('<','&lt;').gsub('>','&gt;')
-        bot.irc.send ":#{bot.config.user}!#{bot.config.user}@#{bot.config.user}.tmi.twitch.tv PRIVMSG #{channel} :#{string}"
-    end
+	def twitch(string)
+		string = string.to_s.gsub('<','&lt;').gsub('>','&gt;')
+		bot.irc.send ":#{bot.config.user}!#{bot.config.user}@#{bot.config.user}.tmi.twitch.tv PRIVMSG #{channel} :#{string}"
+	end
 end
 
 # Create a Cinch bot
