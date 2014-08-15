@@ -5,15 +5,15 @@ require 'net/https'
 require 'uri'
 
 class Player
-	include Cinch::Plugin
+  include Cinch::Plugin
 
-	match /player (.+)/
-	def execute(m, nick)
-		message = retrieve_player_data(nick)
-		m.twitch(message)
-	end
+  match /player (.+)/
+  def execute(m, nick)
+    message = retrieve_player_data(nick)
+    m.twitch(message)
+  end
 
-	def retrieve_player_data(nick)
-		# TODO: Implement code
-	end
+  def retrieve_player_data(nick)
+    # TODO: Implement code
+  end
 end
