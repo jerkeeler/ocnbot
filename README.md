@@ -22,5 +22,5 @@ If you want to contribute to OCNBot's functionality simply make a pull request w
 * player data :ballot_box_with_check:
 * team data
 * topic title
-* mc status
+* mc status :ballot_box_with_check:
 * timeout / banning
