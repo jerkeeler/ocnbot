@@ -22,7 +22,7 @@ port = 6667
 channels = ["#cacklingpanda"]
 
 # Plugins to load, class names
-load_plugins = [Hello, Player]
+load_plugins = [Hello, Player, Status]
 
 # Filepath to the password file
 pass_file = ".secret"
