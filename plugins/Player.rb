@@ -3,7 +3,7 @@
 # "PlayerName: Kills - 11, Deaths - 11, KD - 1, KK - 2, Wools - 1, Cores - 1, Monuments - 1, Playtime - 1 hour"
 
 require 'nokogiri'
-require_relative 'utilities'
+require_relative 'utility'
 
 class Player
   include Cinch::Plugin
