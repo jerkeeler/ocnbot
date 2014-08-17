@@ -4,6 +4,7 @@
 
 module Utility
   require 'net/https'
+  require 'net/ping'
 
   # Retrieve html from the specified url, works with SSL web pages
   def Utility.retrieve_html(url)
@@ -13,5 +14,10 @@ module Utility
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE if url.port == 443
     path = url.path
     res = http.get(path)
+  end
+
+  # Ping a MC server using the net-ping gem and the external ping
+  def Utility.ping_mcserver(ip)
+    Net::Ping::External.new(ip).ping?
   end
 end
