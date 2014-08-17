@@ -18,7 +18,7 @@ nick = "OCNBot"
 port = 6667
 
 # Plugins to load, class names
-load_plugins = [Hello, Player, Status]
+load_plugins = [Hello, Player, Status, OCNTopic]
 
 # File path to file containing list of channels to join
 channels_file = "channels.txt"

@@ -15,6 +15,8 @@ class Status
     message = get_mcstatus_string
     m.twitch(message)
 
+    sleep(1);
+    
     message = get_ocnstatus_string
     m.twitch(message)
   end
