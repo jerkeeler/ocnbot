@@ -19,6 +19,7 @@ class Player
   # Retrieve the player data from https://oc.tc given the player's Minecraft
   # name
   def retrieve_player_data_string(nick, url = false)
+    nick = nick.split(" ")[0]
     res = url ? Utility::retrieve_html(nick) : Utility::retrieve_html("https://oc.tc/#{nick}/")
 
     # Check what the server response was and do correct action
