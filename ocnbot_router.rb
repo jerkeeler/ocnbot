@@ -17,12 +17,30 @@ user = "OCNBot"
 nick = "OCNBot"
 port = 6667
 
-# List of channels to join
-# TODO: Make own method and abstract list of channels to a file
-channels = ["#cacklingpanda"]
-
 # Plugins to load, class names
 load_plugins = [Hello, Player, Status]
+
+# File path to file containing list of channels to join
+channels_file = "channels.txt"
+
+# Get the list of channels given a filepath
+def get_channels(filepath)
+  channel_file = filepath
+  if File.exist?(channel_file)
+    channels = Array.new()
+
+    # One channel per line please
+    File.open(channel_file).each_line do |line|
+      channels.push line.chomp
+    end
+
+    channels
+  else
+    abort("No channel file found!")
+  end
+end
+
+channels = get_channels(channels_file)
 
 # Filepath to the password file
 pass_file = ".secret"
