@@ -12,6 +12,7 @@ module Utility
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = true if url.port == 443
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE if url.port == 443
+    path = url.path
     res = http.get(url)
   end
 

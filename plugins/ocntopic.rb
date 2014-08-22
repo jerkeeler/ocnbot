@@ -1,5 +1,6 @@
 # This class is a Cinch plugin that listens on message join. If the message
 # contains a link to an OCN forum topic it will post the title of the topic.
+# TODO: Add support for multiple links in the same message
 
 require 'nokogiri'
 require_relative 'utility'
