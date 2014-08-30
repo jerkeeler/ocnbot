@@ -26,3 +26,4 @@ If you want to contribute to OCNBot's functionality simply make a pull request w
 * timeout / banning
 * Announcements
 * Raffle
+* Arbitrary commands for messages (ex. !cmd add <cmd name> <cmd message>)
